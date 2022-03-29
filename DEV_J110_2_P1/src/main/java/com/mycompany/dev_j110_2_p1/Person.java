@@ -80,7 +80,10 @@ public class Person {
     }
 //Реализация метода print, печатает информацию о персоне
     public void print (){
-        System.out.println("This is " +getName()+ " " + getSurname()+". "+(getGender()==Gender.MALE ? Gender.MALE : Gender.FEMALE)+" at "+getDepartment()+".");
+        System.out.println("This is " +getName()+ " " + getSurname()+". "+
+                (getGender()==Gender.MALE ? Gender.MALE : Gender.FEMALE)+
+                ( this instanceof Teacher ? " teaches" : " studies")+" at "
+                +getDepartment()+".");
     }
 //Реализация метода printAll, печатает данные о персонах из заданного массива
     public static void printAll (Person[] person) {
